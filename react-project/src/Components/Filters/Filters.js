@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const ProductCard = () => {
+export const Filters = () => {
   return (
     <div>
-      <p>Produtos</p>
+      <p>Filters</p>
     </div>
   )
 }
