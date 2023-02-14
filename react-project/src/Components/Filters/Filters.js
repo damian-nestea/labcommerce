@@ -1,9 +1,10 @@
 import React from 'react'
+import { FiltersContainer , FiltersTitle } from './filtersStyle'
 
 export const Filters = () => {
   return (
-    <div>
-      <p>Filters</p>
-    </div>
+    <FiltersContainer>
+      <FiltersTitle>Filters</FiltersTitle>
+    </FiltersContainer>
   )
 }
