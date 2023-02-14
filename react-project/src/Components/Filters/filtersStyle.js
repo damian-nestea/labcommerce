@@ -13,6 +13,26 @@ export const FiltersTitle = styled.h2`
 
 `
 
+export const Form = styled.form`
+  display:flex;
+  flex-direction:column;
+  margin-top:2rem;
+  gap:1rem;
+
+`
+
+export const StyledLabel = styled.label`
+  display:flex;
+  flex-direction:column;
+  gap:0.1rem;
+`
+
+export const Input = styled.input`
+
+`
+
+
+
 
 
 
