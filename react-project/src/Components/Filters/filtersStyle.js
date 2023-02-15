@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FiltersContainer = styled.section`
   width:20vw;
-  height:80vh;
+  min-height:80vh;
   display:flex;
   flex-direction:column;
   padding:1rem;
