@@ -15,7 +15,7 @@ export const ImagemProduto = styled.img`
   border-radius:0.5rem;
 `
 
-export const NomeProduto = styled.h2`
+export const NomeProduto = styled.h3`
 `
 
 export const ValorProduto = styled.p`
