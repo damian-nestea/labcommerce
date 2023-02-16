@@ -9,6 +9,22 @@ export const HomeContainer = styled.main`
   gap:1rem;
   align-items:flex-start;
   justify-content:space-evenly;
-  padding:1rem 2rem;
-  
+  padding:1rem 2rem; 
 `
+
+export const HomeTopContainer = styled.div`
+  flex:0 0 100%;
+  display:flex;
+  justify-content:space-between;
+`
+
+export const QtdeProdutos = styled.p`
+
+`
+
+export const LabelListOrdenacao = styled.label``
+
+export const DropDownListOrdenacao = styled.select`
+`
+
+export const DropDownOptions = styled.option``
