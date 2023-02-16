@@ -1,11 +1,22 @@
 import React from 'react';
 import { ProductCard } from '../ProductCard/ProductCard'
-import {HomeContainer} from './homeStyle'
+import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , DropDownOptions } from './homeStyle'
 
 export const Home = () => {
   return (
-    <div>
       <HomeContainer>
+        <HomeTopContainer>
+          <QtdeProdutos>Quantidade de produtos:</QtdeProdutos>
+          <LabelListOrdenacao htmlFor='ordenacao'>
+            Ordenaçao:
+            <DropDownListOrdenacao id='ordenacao'>
+              <DropDownOptions value="crescente">Crescente</DropDownOptions>
+              <DropDownOptions value="decrescente">Decrescente</DropDownOptions>
+            </DropDownListOrdenacao>
+          </LabelListOrdenacao>
+
+          
+        </HomeTopContainer>
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
@@ -14,6 +25,5 @@ export const Home = () => {
         <ProductCard/>
         <ProductCard/>
       </HomeContainer>
-    </div>
   )
 }
