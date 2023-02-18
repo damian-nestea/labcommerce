@@ -4,7 +4,11 @@ import { Items } from '../ShoppingCart/Items/Items';
 import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , DropDownOptions } from './homeStyle'
 
 export const Home = ({ItemsList}) => {
+  /* Declaração de estado para ordenar produtos */
+  const [ordination, setOrdination] = React.useState("");
+  
   const ItemsCount = ItemsList.length;
+
   return (
       <HomeContainer>
         <HomeTopContainer>
