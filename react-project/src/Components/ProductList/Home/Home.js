@@ -5,13 +5,14 @@ import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , 
 
 export const Home = ({ItemsList}) => {
   /* Declaração de estado para ordenar produtos */
-  const [ordination, setOrdination] = React.useState(["Crescente","Descrescente"]);
-  const Add = ordination.map(Add => Add
+  const listaOrdination = ["Crescente", "Decrescente"]
+  const [ordination, setOrdination] = React.useState(listaOrdination[0]);
+  const Add = listaOrdination.map(Add => Add
     )
 
   const onChangeOrdination = (e) =>{
     console.log(ordination)
-    console.log(ordination[e.target.value]);
+    setOrdination(e.target.value)
   }
 
   let ItemsCount = ItemsList.length;
@@ -24,10 +25,8 @@ export const Home = ({ItemsList}) => {
             Ordenaçao:
             <DropDownListOrdenacao onChange={onChangeOrdination} id='ordenacao'>
             {
-              Add.map((address, key) => <option value={key}>{address}</option>)
+              Add.map((address) => <option value={address}>{address}</option>)
             }
-              {/* <DropDownOptions value={ordination}></DropDownOptions>
-              <DropDownOptions value="decrescente">Decrescente</DropDownOptions> */}
             </DropDownListOrdenacao>
           </LabelListOrdenacao>          
         </HomeTopContainer>
