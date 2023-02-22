@@ -3,7 +3,7 @@ import { ProductCard } from '../ProductCard/ProductCard'
 import { Items } from '../ShoppingCart/Items/Items';
 import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , DropDownOptions } from './homeStyle'
 
-export const Home = ({ItemsList}) => {
+export const Home = ({ItemsList, car, setCar,amount,setAmount}) => {
   /* Declaração de estado para ordenar produtos */
   const listaOrdination = ["Crescente", "Decrescente"]
   const [ordination, setOrdination] = React.useState(listaOrdination[0]);

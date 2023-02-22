@@ -11,8 +11,8 @@ function App() {
   const [minFilter, setMinFilter] = React.useState("1");
   const [maxFilter, setMaxFilter] = React.useState("2");
   const [searchFilter, setSearchFilter] = React.useState("C");
-  const [car, setCar] = React.useState("");
-  const [amount, setAmount] = React.useState("");
+  const [car, setCar] = React.useState("CartSS");
+  const [amount, setAmount] = React.useState(5);
 
   const onChangeMinFilter = (e) =>{
     setMinFilter(e.target.value);
@@ -39,8 +39,17 @@ function App() {
       />
       <Home
         ItemsList = {ItemsList}
+        car = {car}
+        setCar = {setCar}
+        amount = {amount}
+        setAmount = {setAmount}
       />
-      <Cart />
+      <Cart
+        car = {car}
+        setCar = {setCar}
+        amount = {amount}
+        setAmount = {setAmount}
+      />
     </div>
   );
 }
