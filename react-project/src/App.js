@@ -11,18 +11,23 @@ function App() {
   const [minFilter, setMinFilter] = React.useState("1");
   const [maxFilter, setMaxFilter] = React.useState("2");
   const [searchFilter, setSearchFilter] = React.useState("C");
-  const [car, setCar] = React.useState("CartSS");
-  const [amount, setAmount] = React.useState(5);
+  const [car, setCar] = React.useState([]);
+  const [amount, setAmount] = React.useState(0);
 
   const onChangeMinFilter = (e) =>{
     e.target.value >= 0 ? setMinFilter(e.target.value):alert(`Só valores positivos!`);
   }
   const onChangeMaxFilter = (e) =>{
-    e.target.value >=0 ? setMaxFilter(e.target.value):alert(`Só valores positivos!`);
+    e.target.value >= 0 ? setMaxFilter(e.target.value):alert(`Só valores positivos!`);
   }
 
   const onChangeSearchFilter = (e) =>{
     setSearchFilter(e.target.value);
+  }
+
+  const addToCart = (item) => {
+    console.log(car)
+    setCar([...car,{...item}])
   }
 
 
@@ -43,6 +48,7 @@ function App() {
         setCar = {setCar}
         amount = {amount}
         setAmount = {setAmount}
+        addToCart = {addToCart}
       />
       <Cart
         car = {car}

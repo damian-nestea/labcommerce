@@ -8,11 +8,6 @@ export const Cart = ({car,setCar,amount,setAmount}) => {
       <CartTitle>Cart</CartTitle>
       <ItemsContainer>
         <Items />
-        <Items />
-        <Items />
-        <Items />
-        <Items />
-        <Items />
       </ItemsContainer>
       <ValorTotal>Valor Total: {amount}</ValorTotal>
     </CartContainer>

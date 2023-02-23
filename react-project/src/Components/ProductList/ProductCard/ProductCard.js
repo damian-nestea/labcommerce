@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardContainer,Card , ImagemProduto ,NomeProduto , ValorProduto , AddToCartButton} from './productCardStyle'
 
-export const ProductCard = ({ItemsList}) => {
+export const ProductCard = ({ItemsList,addToCart}) => {
   return (
     <CardContainer>
       {ItemsList.map((produto) => (
@@ -9,7 +9,7 @@ export const ProductCard = ({ItemsList}) => {
           <ImagemProduto src={produto.imageUrl}/>
           <NomeProduto key={produto.name}>{produto.name}</NomeProduto>
           <ValorProduto key={produto.price}>R$ {produto.price}</ValorProduto>
-          <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
+          <AddToCartButton onClick={()=>addToCart(produto)}>Adicionar ao Carrinho</AddToCartButton>
         </Card>
       ))}
     </CardContainer>
