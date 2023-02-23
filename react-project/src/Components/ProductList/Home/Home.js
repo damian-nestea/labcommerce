@@ -3,22 +3,36 @@ import { ProductCard } from '../ProductCard/ProductCard'
 import { Items } from '../ShoppingCart/Items/Items';
 import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , DropDownOptions } from './homeStyle'
 
-export const Home = ({ItemsList}) => {
-  const ItemsCount = ItemsList.length;
+export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart}) => {
+  /* Declaração de estado para ordenar produtos */
+  const listaOrdination = ["Crescente", "Decrescente"]
+  const [ordination, setOrdination] = React.useState(listaOrdination[0]);
+  const Add = listaOrdination.map(Add => Add
+    )
+
+  const onChangeOrdination = (e) =>{
+    console.log(ordination)
+    setOrdination(e.target.value)
+  }
+
+  let ItemsCount = ItemsList.length;
+
   return (
       <HomeContainer>
         <HomeTopContainer>
           <QtdeProdutos>Quantidade de produtos: {ItemsCount}</QtdeProdutos>
           <LabelListOrdenacao htmlFor='ordenacao'>
             Ordenaçao:
-            <DropDownListOrdenacao id='ordenacao'>
-              <DropDownOptions value="crescente">Crescente</DropDownOptions>
-              <DropDownOptions value="decrescente">Decrescente</DropDownOptions>
+            <DropDownListOrdenacao onChange={onChangeOrdination} id='ordenacao'>
+            {
+              Add.map((address) => <option value={address}>{address}</option>)
+            }
             </DropDownListOrdenacao>
           </LabelListOrdenacao>          
         </HomeTopContainer>
         <ProductCard
           ItemsList = {ItemsList}
+          addToCart = {addToCart}
         />
         
       </HomeContainer>
