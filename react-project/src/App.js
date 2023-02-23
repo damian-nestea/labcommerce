@@ -26,8 +26,12 @@ function App() {
   }
 
   const addToCart = (item) => {
+    const itemEncontrado = car.find((cartItem)=>{
+      return cartItem.id === item.id;
+    });
+    console.log(itemEncontrado);
     console.log(car)
-    setCar([...car,{...item}])
+    setCar([...car,{...item, quantity:1}])
   }
 
 
