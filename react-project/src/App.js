@@ -15,10 +15,10 @@ function App() {
   const [amount, setAmount] = React.useState(5);
 
   const onChangeMinFilter = (e) =>{
-    setMinFilter(e.target.value);
+    e.target.value >= 0 ? setMinFilter(e.target.value):alert(`Só valores positivos!`);
   }
   const onChangeMaxFilter = (e) =>{
-    setMaxFilter(e.target.value);
+    e.target.value >=0 ? setMaxFilter(e.target.value):alert(`Só valores positivos!`);
   }
 
   const onChangeSearchFilter = (e) =>{
