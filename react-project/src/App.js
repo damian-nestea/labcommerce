@@ -39,6 +39,7 @@ function App() {
         )
       );
       console.log(car)
+      setAmount(amount+item.price)
       return;
     }
     // Adiciona no carrinho de compras caso não tenha adicionado antes, adicionando a propriedade quantity com 1 unidade
@@ -46,6 +47,7 @@ function App() {
       ...car,
       { ...item, quantity: 1 }
     ]);
+    setAmount(amount+item.price)
     console.log(car)
   }
 
