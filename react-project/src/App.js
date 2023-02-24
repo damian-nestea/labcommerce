@@ -51,6 +51,24 @@ function App() {
     console.log(car)
   }
 
+  const removeFromCart = (produto) => {
+    setCar((car) =>
+      car.flatMap((cartItem) =>
+        cartItem.id === produto.id
+          ? cartItem.quantity - 1 < 1
+            ? [] // <-- remove item if amount will be less than 1
+            : [
+                {
+                  ...cartItem,
+                  quantity: cartItem.quantity - 1
+                }
+              ]
+          : [cartItem]
+      )
+    );
+    setAmount(amount-produto.price)
+  };
+
   return (
     <div className="App">
       <GlobalStyle />
@@ -75,6 +93,7 @@ function App() {
         setCar = {setCar}
         amount = {amount}
         setAmount = {setAmount}
+        removeFromCart = {removeFromCart}
       />
     </div>
   );

@@ -1,14 +1,14 @@
 import React from 'react'
 import { ItemListContainer, ItemContainer ,QuantidadeItem , NomeItem, RemoverButton} from './itemsStyle'
 
-export const Items = ({car}) => {
+export const Items = ({car,removeFromCart}) => {
   return (
     <ItemListContainer>
       {car.map((item) =>
       <ItemContainer>
         <QuantidadeItem key={item.quantity}>{item.quantity}</QuantidadeItem>
         <NomeItem key={item.name}>{item.name}</NomeItem>
-        <RemoverButton>Remover</RemoverButton>
+        <RemoverButton onClick={()=>removeFromCart(item)}>Remover</RemoverButton>
       </ItemContainer>
       )}
     </ItemListContainer>
