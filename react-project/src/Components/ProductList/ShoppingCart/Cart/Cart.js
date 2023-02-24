@@ -7,7 +7,9 @@ export const Cart = ({car,setCar,amount,setAmount}) => {
     <CartContainer>
       <CartTitle>Cart</CartTitle>
       <ItemsContainer>
-        <Items />
+        <Items 
+          car = {car}
+        />
       </ItemsContainer>
       <ValorTotal>Valor Total: {amount}</ValorTotal>
     </CartContainer>

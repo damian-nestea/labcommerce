@@ -1,12 +1,16 @@
 import React from 'react'
-import { ItemContainer ,QuantidadeItem , NomeItem, RemoverButton} from './itemsStyle'
+import { ItemListContainer, ItemContainer ,QuantidadeItem , NomeItem, RemoverButton} from './itemsStyle'
 
-export const Items = () => {
+export const Items = ({car}) => {
   return (
-    <ItemContainer>
-      <QuantidadeItem>x0</QuantidadeItem>
-      <NomeItem>Nome do Item</NomeItem>
-      <RemoverButton>Remover</RemoverButton>
-    </ItemContainer>
+    <ItemListContainer>
+      {car.map((item) =>
+      <ItemContainer>
+        <QuantidadeItem key={item.quantity}>{item.quantity}</QuantidadeItem>
+        <NomeItem key={item.name}>{item.name}</NomeItem>
+        <RemoverButton>Remover</RemoverButton>
+      </ItemContainer>
+      )}
+    </ItemListContainer>
   )
 }
