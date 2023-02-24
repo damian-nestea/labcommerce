@@ -26,14 +26,28 @@ function App() {
   }
 
   const addToCart = (item) => {
-    const itemEncontrado = car.find((cartItem)=>{
-      return cartItem.id === item.id;
-    });
-    console.log(itemEncontrado);
+    // adiciona no carrinho, caso já exista um item com o mesmo id, adiciona 1 unidade na quantidade
+    if (car.some((cartItem) => cartItem.id === item.id)) {
+      setCar((car) =>
+        car.map((cartItem) =>
+          cartItem.id === item.id
+            ? {
+                ...cartItem,
+                quantity: cartItem.quantity + 1
+              }
+            : cartItem
+        )
+      );
+      console.log(car)
+      return;
+    }
+    // Adiciona no carrinho de compras caso não tenha adicionado antes, adicionando a propriedade quantity com 1 unidade
+    setCar((car) => [
+      ...car,
+      { ...item, quantity: 1 }
+    ]);
     console.log(car)
-    setCar([...car,{...item, quantity:1}])
   }
-
 
   return (
     <div className="App">
