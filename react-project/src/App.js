@@ -26,10 +26,48 @@ function App() {
   }
 
   const addToCart = (item) => {
+    // adiciona no carrinho, caso já exista um item com o mesmo id, adiciona 1 unidade na quantidade
+    if (car.some((cartItem) => cartItem.id === item.id)) {
+      setCar((car) =>
+        car.map((cartItem) =>
+          cartItem.id === item.id
+            ? {
+                ...cartItem,
+                quantity: cartItem.quantity + 1
+              }
+            : cartItem
+        )
+      );
+      console.log(car)
+      setAmount(amount+item.price)
+      return;
+    }
+    // Adiciona no carrinho de compras caso não tenha adicionado antes, adicionando a propriedade quantity com 1 unidade
+    setCar((car) => [
+      ...car,
+      { ...item, quantity: 1 }
+    ]);
+    setAmount(amount+item.price)
     console.log(car)
-    setCar([...car,{...item}])
   }
 
+  const removeFromCart = (produto) => {
+    setCar((car) =>
+      car.flatMap((cartItem) =>
+        cartItem.id === produto.id
+          ? cartItem.quantity - 1 < 1
+            ? [] // <-- remove item if amount will be less than 1
+            : [
+                {
+                  ...cartItem,
+                  quantity: cartItem.quantity - 1
+                }
+              ]
+          : [cartItem]
+      )
+    );
+    setAmount(amount-produto.price)
+  };
 
   return (
     <div className="App">
@@ -55,6 +93,7 @@ function App() {
         setCar = {setCar}
         amount = {amount}
         setAmount = {setAmount}
+        removeFromCart = {removeFromCart}
       />
     </div>
   );
