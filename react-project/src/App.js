@@ -8,8 +8,8 @@ import { ItemsList } from './Components/assets/productList';
 
 function App() {
   /* Criação de estados para filtros dos produtos e dados do carrinho de compras */
-  const [minFilter, setMinFilter] = React.useState("1");
-  const [maxFilter, setMaxFilter] = React.useState("2");
+  const [minFilter, setMinFilter] = React.useState(-Infinity);
+  const [maxFilter, setMaxFilter] = React.useState(Infinity);
   const [searchFilter, setSearchFilter] = React.useState("");
   const [car, setCar] = React.useState([]);
   const [amount, setAmount] = React.useState(0);
@@ -88,6 +88,8 @@ function App() {
         setAmount = {setAmount}
         addToCart = {addToCart}
         searchFilter = {searchFilter}
+        minFilter = {minFilter}
+        maxFilter = {maxFilter}
       />
       <Cart
         car = {car}

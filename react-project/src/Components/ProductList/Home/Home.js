@@ -3,7 +3,7 @@ import { ProductCard } from '../ProductCard/ProductCard'
 import { Items } from '../ShoppingCart/Items/Items';
 import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , HomeProductList } from './homeStyle'
 
-export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , searchFilter}) => {
+export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , searchFilter, minFilter, maxFilter}) => {
   /* Declaração de estado para ordenar produtos */
   const listaOrdination = ["Crescente", "Decrescente"]
   const [ordination, setOrdination] = React.useState(listaOrdination[0]);
@@ -36,6 +36,12 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , search
           {ItemsList
             .filter((product)=>{
               return product.name.toLowerCase().includes(searchFilter.toLowerCase());
+            })
+            .filter((product)=>{
+              return product.price >= minFilter || minFilter === "";
+            })
+            .filter((product)=>{
+              return product.price <= maxFilter || maxFilter === "";
             })
             .map((product) =>{
               return <ProductCard key={product.id} product = {product} addToCart = {addToCart}/>
