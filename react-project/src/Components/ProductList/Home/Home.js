@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProductCard } from '../ProductCard/ProductCard'
 import { Items } from '../ShoppingCart/Items/Items';
-import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , DropDownOptions } from './homeStyle'
+import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , HomeProductList } from './homeStyle'
 
 export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart}) => {
   /* Declaração de estado para ordenar produtos */
@@ -30,11 +30,13 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart}) => {
             </DropDownListOrdenacao>
           </LabelListOrdenacao>          
         </HomeTopContainer>
-        <ProductCard
-          ItemsList = {ItemsList}
-          addToCart = {addToCart}
-        />
         
+        {/* Renderização de lista de Produtos */}
+        <HomeProductList>
+          {ItemsList.map((product) =>{
+            return <ProductCard key={product.id} product = {product} addToCart = {addToCart}/>
+          })}
+        </HomeProductList>
       </HomeContainer>
   )
 }
