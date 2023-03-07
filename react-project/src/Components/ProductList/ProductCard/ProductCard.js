@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardContainer,Card , ImagemProduto ,NomeProduto , ValorProduto , AddToCartButton} from './productCardStyle'
+import {Card , ImagemProduto ,NomeProduto , ValorProduto , AddToCartButton} from './productCardStyle'
 import { FormatPrice } from '../FormatPrice/FormatPrice'
 
 export const ProductCard = ({product, addToCart}) => {
