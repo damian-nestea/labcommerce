@@ -56,7 +56,7 @@ function App() {
       car.flatMap((cartItem) =>
         cartItem.id === produto.id
           ? cartItem.quantity - 1 < 1
-            ? [] // <-- remove item if amount will be less than 1
+            ? [] // remove o item se a quantidade for 1 ou menor
             : [
                 {
                   ...cartItem,
