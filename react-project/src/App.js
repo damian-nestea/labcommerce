@@ -5,6 +5,7 @@ import { Filters } from './Components/Filters/Filters'
 import { Home } from './Components/ProductList/Home/Home';
 import { Cart } from './Components/ProductList/ShoppingCart/Cart/Cart';
 import { ItemsList } from './Components/assets/productList';
+import { Header } from './Components/Header/Header';
 
 function App() {
   /* Criação de estados para filtros dos produtos e dados do carrinho de compras */
@@ -70,34 +71,37 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <GlobalStyle />
-      <Filters
-        minFilter = {minFilter}
-        onChangeMinFilter ={onChangeMinFilter}
-        maxFilter = {maxFilter}
-        onChangeMaxFilter ={onChangeMaxFilter}
-        searchFilter = {searchFilter}
-        onChangeSearchFilter ={onChangeSearchFilter}
-      />
-      <Home
-        ItemsList = {ItemsList}
-        car = {car}
-        setCar = {setCar}
-        amount = {amount}
-        setAmount = {setAmount}
-        addToCart = {addToCart}
-        searchFilter = {searchFilter}
-        minFilter = {minFilter}
-        maxFilter = {maxFilter}
-      />
-      <Cart
-        car = {car}
-        setCar = {setCar}
-        amount = {amount}
-        setAmount = {setAmount}
-        removeFromCart = {removeFromCart}
-      />
+      <Header />
+        <div className="App">
+        <Filters
+          minFilter = {minFilter}
+          onChangeMinFilter ={onChangeMinFilter}
+          maxFilter = {maxFilter}
+          onChangeMaxFilter ={onChangeMaxFilter}
+          searchFilter = {searchFilter}
+          onChangeSearchFilter ={onChangeSearchFilter}
+        />
+        <Home
+          ItemsList = {ItemsList}
+          car = {car}
+          setCar = {setCar}
+          amount = {amount}
+          setAmount = {setAmount}
+          addToCart = {addToCart}
+          searchFilter = {searchFilter}
+          minFilter = {minFilter}
+          maxFilter = {maxFilter}
+        />
+        <Cart
+          car = {car}
+          setCar = {setCar}
+          amount = {amount}
+          setAmount = {setAmount}
+          removeFromCart = {removeFromCart}
+        />
+      </div>
     </div>
   );
 }
