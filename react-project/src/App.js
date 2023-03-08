@@ -8,9 +8,9 @@ import { ItemsList } from './Components/assets/productList';
 
 function App() {
   /* Criação de estados para filtros dos produtos e dados do carrinho de compras */
-  const [minFilter, setMinFilter] = React.useState("1");
-  const [maxFilter, setMaxFilter] = React.useState("2");
-  const [searchFilter, setSearchFilter] = React.useState("C");
+  const [minFilter, setMinFilter] = React.useState(-Infinity);
+  const [maxFilter, setMaxFilter] = React.useState(Infinity);
+  const [searchFilter, setSearchFilter] = React.useState("");
   const [car, setCar] = React.useState([]);
   const [amount, setAmount] = React.useState(0);
 
@@ -56,7 +56,7 @@ function App() {
       car.flatMap((cartItem) =>
         cartItem.id === produto.id
           ? cartItem.quantity - 1 < 1
-            ? [] // <-- remove item if amount will be less than 1
+            ? [] // remove o item se a quantidade for 1 ou menor
             : [
                 {
                   ...cartItem,
@@ -87,6 +87,9 @@ function App() {
         amount = {amount}
         setAmount = {setAmount}
         addToCart = {addToCart}
+        searchFilter = {searchFilter}
+        minFilter = {minFilter}
+        maxFilter = {maxFilter}
       />
       <Cart
         car = {car}

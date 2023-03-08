@@ -18,6 +18,13 @@ export const HomeTopContainer = styled.div`
   justify-content:space-between;
 `
 
+export const HomeProductList = styled.section `
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  justify-content:space-evenly;
+`
+
 export const QtdeProdutos = styled.p`
 
 `
@@ -26,5 +33,3 @@ export const LabelListOrdenacao = styled.label``
 
 export const DropDownListOrdenacao = styled.select`
 `
-
-export const DropDownOptions = styled.option``
