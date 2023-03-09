@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderContainer , MainNavBar , MenuItem } from './headerStyle'
+import { HeaderContainer , MainNavBar , MenuItem , Logo,  AreaUsuario , Login , Register} from './headerStyle'
 
 export const Header = () => {
   return (
@@ -10,6 +10,14 @@ export const Header = () => {
         <li><MenuItem href='./'>Sobre nós</MenuItem></li>
         <li><MenuItem href='./'>Contato</MenuItem></li>
       </MainNavBar>
+      <Logo>Logo</Logo>
+      <AreaUsuario>
+        <Login href='./'>Login</Login>
+        <Register href='./'>Cadastro</Register>
+      
+      </AreaUsuario>
+
+
 
 
     </HeaderContainer>
