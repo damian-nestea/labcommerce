@@ -6,6 +6,7 @@ import { Home } from './Components/ProductList/Home/Home';
 import { Cart } from './Components/ProductList/ShoppingCart/Cart/Cart';
 import { ItemsList } from './Components/assets/productList';
 import { Header } from './Components/Header/Header';
+import { Footer } from './Components/Footer/Footer';
 
 function App() {
   /* Criação de estados para filtros dos produtos e dados do carrinho de compras */
@@ -102,6 +103,7 @@ function App() {
           removeFromCart = {removeFromCart}
         />
       </div>
+      <Footer />
     </div>
   );
 }
