@@ -90,5 +90,8 @@ export const LinksRedesSociais = styled.a`
   img{
     width:2rem;
     border-radius:0.5rem;
+    :hover{
+      width:2.2rem;
+    }
   }
 `
