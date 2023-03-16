@@ -26,6 +26,9 @@ export const MenuItem = styled.a`
     color:#009A87;
     text-transform:uppercase;
   }
+  :hover{
+    color:#F68A53
+  }
 `
 
 export const Logo = styled.p`
@@ -46,6 +49,9 @@ export const Login = styled.a`
     padding:0.5rem 1.2rem;
     border-radius:0.25rem;
   }
+  :hover{
+    color:#F68A53
+  }
 `
 
 export const Register = styled.a`
@@ -56,5 +62,8 @@ export const Register = styled.a`
     background-color:#00665e;
     padding:0.5rem 1.5rem;
     border-radius:0.25rem;
+  }
+  :hover{
+    color:#F68A53
   }
 `
