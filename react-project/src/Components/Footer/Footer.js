@@ -23,9 +23,8 @@ export const Footer = () => {
         CONTATO
         <li><ContatoLinks href="./">SHOP: hello@astrodevshop.com</ContatoLinks></li>
         <li><ContatoLinks href="./">IMPRENSA: press@astrodevshop.com</ContatoLinks></li>
-        <li><ContatoLinks href="./">Área do cliente</ContatoLinks></li>
-        <li><ContatoLinks href="./">Política de privacidade</ContatoLinks></li>
-        <li><ContatoLinks href="./">Termos e condições</ContatoLinks></li>
+        <li><ContatoLinks href="./">LOJA MATRIZ: Rua Marte 12, Poços de Caldas - MG</ContatoLinks></li>
+        <li><ContatoLinks href="./">+55(35)2222-0000</ContatoLinks></li>
       </AstroDevLinks>
     </FooterContainer>
   )
