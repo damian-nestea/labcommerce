@@ -54,29 +54,6 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , search
 
         {/* Renderização de lista de Produtos */}
         <HomeProductList>
-          {/* 
-          {ItemsList
-            .filter((product)=>{
-              return product.name.toLowerCase().includes(searchFilter.toLowerCase());
-            })
-            .filter((product)=>{
-              return product.price >= minFilter || minFilter === "";
-            })
-            .filter((product)=>{
-              return product.price <= maxFilter || maxFilter === "";
-            })
-            .sort((a,b) =>{
-              if(ordination ==="Menor preço"){
-                return a.price - b.price;
-              }else if(ordination === "Maior preço"){
-                return b.price - a.price
-              }
-            })
-            .map((product) =>{
-              return <ProductCard key={product.id} product = {product} addToCart = {addToCart}/>
-            })
-          }
-          */}
           {ItensFiltrados}
         </HomeProductList>
       </HomeContainer>
