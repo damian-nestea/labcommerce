@@ -14,7 +14,29 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , search
     setOrdination(e.target.value)
   }
 
-  let ItemsCount = ItemsList.length;
+  //Variável contendo filtro e ordenação para renderização de lista de produtos
+  const ItensFiltrados = ItemsList
+    .filter((product)=>{
+      return product.name.toLowerCase().includes(searchFilter.toLowerCase());
+    })
+    .filter((product)=>{
+      return product.price >= minFilter || minFilter === "";
+    })
+    .filter((product)=>{
+      return product.price <= maxFilter || maxFilter === "";
+    })
+    .sort((a,b) =>{
+      if(ordination ==="Menor preço"){
+        return a.price - b.price;
+      }else if(ordination === "Maior preço"){
+        return b.price - a.price
+      }
+    })
+    .map((product) =>{
+      return <ProductCard key={product.id} product = {product} addToCart = {addToCart}/>
+    })
+
+  let ItemsCount = ItensFiltrados.length;
 
   return (
       <HomeContainer>
@@ -32,6 +54,7 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , search
 
         {/* Renderização de lista de Produtos */}
         <HomeProductList>
+          {/* 
           {ItemsList
             .filter((product)=>{
               return product.name.toLowerCase().includes(searchFilter.toLowerCase());
@@ -53,6 +76,8 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , search
               return <ProductCard key={product.id} product = {product} addToCart = {addToCart}/>
             })
           }
+          */}
+          {ItensFiltrados}
         </HomeProductList>
       </HomeContainer>
   )

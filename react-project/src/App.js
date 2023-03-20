@@ -22,7 +22,7 @@ function App() {
   const onChangeMaxFilter = (e) =>{
     e.target.value >= 0 ? setMaxFilter(e.target.value):alert(`Só valores positivos!`);
   }
-
+                        
   const onChangeSearchFilter = (e) =>{
     setSearchFilter(e.target.value);
   }
