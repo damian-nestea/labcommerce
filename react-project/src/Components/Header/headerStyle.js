@@ -31,8 +31,12 @@ export const MenuItem = styled.a`
   }
 `
 
-export const Logo = styled.p`
-  
+export const Logo = styled.img`
+margin-right:10vw;
+  height:7rem;
+  :hover{
+    height:8rem;
+  }
 `
 
 export const AreaUsuario = styled.div`

@@ -10,11 +10,12 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , search
   const Add = listaOrdination.map(Add => Add
     )
 
+  /* Mudança de estado do select de ordenação */
   const onChangeOrdination = (e) =>{
     setOrdination(e.target.value)
   }
 
-  //Variável contendo filtro e ordenação para renderização de lista de produtos
+  /* Variável contendo filtro e ordenação para renderização de lista de produtos */
   const ItensFiltrados = ItemsList
     .filter((product)=>{
       return product.name.toLowerCase().includes(searchFilter.toLowerCase());
@@ -51,7 +52,6 @@ export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , search
             </DropDownListOrdenacao>
           </LabelListOrdenacao>          
         </HomeTopContainer>
-
         {/* Renderização de lista de Produtos */}
         <HomeProductList>
           {ItensFiltrados}
