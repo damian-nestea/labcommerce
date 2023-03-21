@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  height:10vh;
+  height:15vh;
   width:100vw;
   max-width:100%;
   padding: 0 5rem;
