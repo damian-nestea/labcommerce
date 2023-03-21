@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const CardContainer =  styled.section`
   display:flex;
   flex-wrap:wrap;
-  gap:1.5rem;
+  gap:2.5rem;
   justify-content:space-evenly;
 `
 
@@ -14,13 +14,20 @@ export const Card = styled.article`
   width:15vw;
   padding:1rem;
   gap:0.5rem;
-  border:0.1rem solid #000;
-  border-radius:0.3rem;
+`
+
+export const ContainerImagemProduto = styled.div`
+  background-color:#A2A2A2;
+  width:15rem;
+  height:15rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 `
 
 export const ImagemProduto = styled.img`
-  width:100%;
-  height:10rem;
+  width:60%;
+  height:60%;
   border-radius:0.5rem;
 `
 
