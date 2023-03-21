@@ -16,6 +16,7 @@ export const MainNavBar = styled.ul`
   display:flex;
   gap:1.5rem;
   list-style:none;
+  font-size:1.2rem;
   margin:0;
   padding:0;
 `
@@ -33,9 +34,9 @@ export const MenuItem = styled.a`
 
 export const Logo = styled.img`
 margin-right:10vw;
-  height:7rem;
+  height:8rem;
   :hover{
-    height:8rem;
+    height:9rem;
   }
 `
 
@@ -50,6 +51,7 @@ export const Login = styled.a`
     text-transform:uppercase;
     color: #ccc;
     background-color:#00665e;
+    font-size:1.2rem;
     padding:0.5rem 1.2rem;
     border-radius:0.25rem;
   }
@@ -64,6 +66,7 @@ export const Register = styled.a`
     text-transform:uppercase;
     color: #ccc;
     background-color:#00665e;
+    font-size:1.2rem;
     padding:0.5rem 1.5rem;
     border-radius:0.25rem;
   }

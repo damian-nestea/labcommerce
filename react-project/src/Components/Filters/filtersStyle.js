@@ -6,7 +6,6 @@ export const FiltersContainer = styled.section`
   display:flex;
   flex-direction:column;
   padding:1rem;
-  border:0.05rem solid #000;
 `
 
 export const FiltersTitle = styled.h2`
