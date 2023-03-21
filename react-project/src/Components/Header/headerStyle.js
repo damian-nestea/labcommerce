@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  height:10vh;
+  height:15vh;
   width:100vw;
   max-width:100%;
   padding: 0 5rem;
@@ -31,8 +31,12 @@ export const MenuItem = styled.a`
   }
 `
 
-export const Logo = styled.p`
-  
+export const Logo = styled.img`
+margin-right:10vw;
+  height:8rem;
+  :hover{
+    height:9rem;
+  }
 `
 
 export const AreaUsuario = styled.div`
@@ -45,7 +49,7 @@ export const Login = styled.a`
     text-decoration:none;
     text-transform:uppercase;
     color: #ccc;
-    background-color:#00665e;
+    background-color:#00665e; 
     padding:0.5rem 1.2rem;
     border-radius:0.25rem;
   }
