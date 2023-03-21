@@ -35,6 +35,10 @@ export const QtdeProdutos = styled.p`
 export const LabelListOrdenacao = styled.label``
 
 export const DropDownListOrdenacao = styled.select`
+  height:2rem;
+  padding:0.2rem;
+  border:0;
+  border-bottom:0.05rem solid #009A87;
   font-family:'Sono' , sans-serif;
   color:#009A87;
 `
