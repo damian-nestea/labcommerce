@@ -54,7 +54,7 @@ export const Login = styled.a`
     border-radius:0.25rem;
   }
   :hover{
-    color:#F68A53
+    color: #f68a53;
   }
 `
 
@@ -68,6 +68,6 @@ export const Register = styled.a`
     border-radius:0.25rem;
   }
   :hover{
-    color:#F68A53
+    color:#F68A53;
   }
 `
