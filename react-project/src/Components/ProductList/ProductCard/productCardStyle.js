@@ -23,6 +23,7 @@ export const ContainerImagemProduto = styled.div`
   display:flex;
   align-items:center;
   justify-content:center;
+  border-radius:0.1rem;
 `
 
 export const ImagemProduto = styled.img`
