@@ -22,8 +22,8 @@ export const QuantidadeItem = styled.p`
   justify-content:center;
   width:1.5rem;
   border: 0.17rem solid #00665e;
-  border-radius:40%;
-  font-size:0.7rem;
+  border-radius:50%;
+  font-size:0.9rem;
 `
 
 export const NomeItem = styled.p`
@@ -33,19 +33,24 @@ export const NomeItem = styled.p`
 `
 
 export const PriceItem = styled.span`
-  font-size:0.7rem;
+  font-size:0.8rem;
   grid-column:3/4;
   grid-row:1/2;
 `
 
 export const AddRemoveContainer = styled.div`
-  padding:0.2rem 0;
   display:flex;
   gap:1rem;
   grid-row:2/3;
   grid-column:1/4;
   justify-content:center;
   align-items:center;
+`
+
+export const RemoveText = styled.p`
+  text-transform:uppercase;
+  font-size:0.9rem;
+  align-self:center;
 `
 
 export const RemoverButton = styled.button`

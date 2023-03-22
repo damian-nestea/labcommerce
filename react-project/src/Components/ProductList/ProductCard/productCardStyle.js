@@ -18,8 +18,8 @@ export const Card = styled.article`
 
 export const ContainerImagemProduto = styled.div`
   background-color:#c2c2c2;
-  width:15rem;
-  height:15rem;
+  width:13rem;
+  height:13rem;
   display:flex;
   align-items:center;
   justify-content:center;
