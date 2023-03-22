@@ -17,7 +17,7 @@ export const Card = styled.article`
 `
 
 export const ContainerImagemProduto = styled.div`
-  background-color:#A2A2A2;
+  background-color:#c2c2c2;
   width:15rem;
   height:15rem;
   display:flex;
