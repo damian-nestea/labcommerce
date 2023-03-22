@@ -63,6 +63,9 @@ export const RemoverButton = styled.button`
   justify-content:center;
   border:none;
   cursor:pointer;
+  :hover{
+    color:#f68a53;
+  }
 `
 
 export const AddButton = styled.button`
@@ -75,4 +78,7 @@ export const AddButton = styled.button`
   justify-content:center;
   border:none;
   cursor:pointer;
+  :hover{
+    color:#f68a53;
+  }
 `
