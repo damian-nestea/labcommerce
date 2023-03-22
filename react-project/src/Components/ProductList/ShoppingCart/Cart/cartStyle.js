@@ -27,3 +27,17 @@ export const ValorTotal = styled.p`
   font-size:0.8rem;
   color:#009A87;
 `
+
+export const FinalizarCompra = styled.button`
+  margin-top:2rem;
+  background-color:#f68a53;
+  color: #fff;
+  text-transform:uppercase;
+  font-family:'Sono' , sans-serif;
+  font-size:1.1rem;
+  font-weight:500;
+  padding:0.5rem;
+  border:none;
+  border-radius:0.2rem;
+  cursor:pointer;
+`
