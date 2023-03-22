@@ -1,7 +1,7 @@
 import React from 'react'
-import { Card , ContainerImagemProduto , ImagemProduto , NomeProduto , DescricaoProduto , ValorProduto , AddToCartButton} from './productCardStyle'
+import { Card , ContainerImagemProduto , ImagemProduto , NomeProduto , DescricaoProduto , ValorProduto , AddToCartButton , ImgCart} from './productCardStyle'
 import { FormatPrice } from '../FormatPrice/FormatPrice'
-/* import addToCart from '../assets/img/addToCart.svg' */
+import {ReactComponent as ImgSvg} from '../../assets/img/imgAddToCart.svg'
 
 export const ProductCard = ({product, addToCart}) => {
   return (
@@ -12,8 +12,7 @@ export const ProductCard = ({product, addToCart}) => {
           <NomeProduto key={product.name}>{product.name}</NomeProduto>
           <DescricaoProduto key={product.description}>{product.description}</DescricaoProduto>
           <ValorProduto key={product.price}><FormatPrice price = {product.price} /> </ValorProduto>
-          <AddToCartButton onClick={()=>addToCart(product)}>Comprar</AddToCartButton>
-          {/* <img src={addToCart}/> */}
+          <AddToCartButton onClick={()=>addToCart(product)}><ImgSvg /></AddToCartButton>
         </Card>
   )
 }

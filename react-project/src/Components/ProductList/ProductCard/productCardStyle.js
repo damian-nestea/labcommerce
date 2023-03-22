@@ -53,6 +53,18 @@ export const ValorProduto = styled.p`
 `
 
 export const AddToCartButton = styled.button`
+display:flex;
+justify-content:center;
+align-items:center;
+padding:0.5rem;
+background-color:#00665e;
+border:none;
+border-radius:0.3rem;
+margin-top:0.5rem;
+`
 
+export const ImgCart = styled.img`
+  fill: #fff;
+  stroke:#fff;
 `
 
