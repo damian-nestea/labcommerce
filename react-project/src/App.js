@@ -101,6 +101,7 @@ function App() {
           amount = {amount}
           setAmount = {setAmount}
           removeFromCart = {removeFromCart}
+          addToCart = {addToCart}
         />
       </div>
       <Footer />
