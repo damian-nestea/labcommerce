@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const CardContainer =  styled.section`
   display:flex;
   flex-wrap:wrap;
-  gap:2.5rem;
-  justify-content:space-evenly;
+  gap:3.5rem;
+  justify-content:space-around;
 `
 
 export const Card = styled.article`
@@ -53,6 +53,7 @@ export const ValorProduto = styled.p`
 `
 
 export const AddToCartButton = styled.button`
+width:4rem;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -61,6 +62,10 @@ background-color:#00665e;
 border:none;
 border-radius:0.3rem;
 margin-top:0.5rem;
+cursor:pointer;
+:hover{
+  background-color:#f68a53;
+}
 `
 
 export const ImgCart = styled.img`
