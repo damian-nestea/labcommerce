@@ -51,3 +51,17 @@ export const RemoverButton = styled.button`
   border:none;
   cursor:pointer;
 `
+
+export const AddButton = styled.button`
+  background-color:#FFF;
+  color:#00665e;
+  font-size:2.3rem;
+  font-weight:500;
+  height:0.1rem;
+  line-height:0.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  cursor:pointer;
+`

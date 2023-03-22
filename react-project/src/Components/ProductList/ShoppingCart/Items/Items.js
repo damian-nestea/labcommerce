@@ -1,6 +1,6 @@
 import React from 'react'
 import { Price } from '../../FormatPrice/formatPriceStyle'
-import { ItemListContainer, ItemContainer , PriceItem,QuantidadeItem , NomeItem, RemoverButton} from './itemsStyle'
+import { ItemListContainer, ItemContainer , PriceItem ,QuantidadeItem , NomeItem, RemoverButton , AddButton} from './itemsStyle'
 import { FormatPrice } from '../../FormatPrice/FormatPrice'
 
 export const Items = ({car,removeFromCart}) => {
@@ -10,8 +10,9 @@ export const Items = ({car,removeFromCart}) => {
       <ItemContainer>
         <NomeItem key={item.name}>{item.name}</NomeItem>
         <PriceItem key={item.id}><FormatPrice price = {item.quantity * item.price}/></PriceItem>
-        <QuantidadeItem key={item.quantity}>{item.quantity}</QuantidadeItem>
         <RemoverButton onClick={()=>removeFromCart(item)}>-</RemoverButton>
+        <QuantidadeItem key={item.quantity}>{item.quantity}</QuantidadeItem>
+        <AddButton onClick={()=>removeFromCart(item)}>+</AddButton>
       </ItemContainer>
       )}
     </ItemListContainer>
