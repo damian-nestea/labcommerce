@@ -14,6 +14,7 @@ export const ItemsContainer = styled.article`
   align-items:center;
   gap:0.5rem;
   margin:2rem 0;
+  padding:1rem;
   color:#00665e;
   font-size:1rem;
 `
