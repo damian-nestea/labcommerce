@@ -8,7 +8,7 @@ export const Items = ({car,removeFromCart}) => {
       <ItemContainer>
         <QuantidadeItem key={item.quantity}>{item.quantity}</QuantidadeItem>
         <NomeItem key={item.name}>{item.name}</NomeItem>
-        <RemoverButton onClick={()=>removeFromCart(item)}>Remover</RemoverButton>
+        <RemoverButton onClick={()=>removeFromCart(item)}>-</RemoverButton>
       </ItemContainer>
       )}
     </ItemListContainer>

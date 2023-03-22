@@ -14,11 +14,15 @@ export const ItemsContainer = styled.article`
   align-items:center;
   gap:0.5rem;
   margin:2rem 0;
+  color:#00665e;
+  font-size:1rem;
 `
 
 export const CartTitle = styled.h2`
-
+  color:#00665e;
 `
 
 export const ValorTotal = styled.p`
+  font-size:0.8rem;
+  color:#009A87;
 `
