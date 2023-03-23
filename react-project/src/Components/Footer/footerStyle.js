@@ -70,6 +70,7 @@ export const Underline = styled.span`
 `
 
 export const FooterBottomContainer = styled.section`
+  min-height:3rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
