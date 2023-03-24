@@ -7,7 +7,7 @@ export const Items = ({ car , removeFromCart , addToCart}) => {
   return (
     <ItemListContainer>
       {car.map((item) =>
-      <ItemContainer>
+      <ItemContainer key={item.id}>
         <NomeItem key={item.name}>{item.name}</NomeItem>
         <PriceItem key={item.id}><FormatPrice price = {item.quantity * item.price}/></PriceItem>
         <AddRemoveContainer>
