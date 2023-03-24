@@ -7,7 +7,6 @@ export const CartContainer = styled.section`
   flex-direction:column;
   padding:1rem;
 `
-
 export const ItemsContainer = styled.article`
   display:flex;
   flex-direction:column;
@@ -18,16 +17,13 @@ export const ItemsContainer = styled.article`
   color:#00665e;
   font-size:1rem;
 `
-
 export const CartTitle = styled.h2`
   color:#00665e;
 `
-
 export const ValorTotal = styled.p`
   font-size:0.8rem;
   color:#009A87;
 `
-
 export const FinalizarCompra = styled.button`
   margin-top:2rem;
   background-color:#f68a53;

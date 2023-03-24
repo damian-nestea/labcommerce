@@ -11,7 +11,6 @@ export const HeaderContainer = styled.header`
   align-items:center;
   font-family:'Sono', sans-serif;
 `
-
 export const MainNavBar = styled.ul`
   display:flex;
   gap:1.5rem;
@@ -19,7 +18,6 @@ export const MainNavBar = styled.ul`
   margin:0;
   padding:0;
 `
-
 export const MenuItem = styled.a`
   :link , :visited{
     text-decoration:none;
@@ -30,7 +28,6 @@ export const MenuItem = styled.a`
     color:#F68A53
   }
 `
-
 export const Logo = styled.img`
 margin-right:10vw;
   height:9rem;
@@ -38,12 +35,10 @@ margin-right:10vw;
     height:11rem;
   }
 `
-
 export const AreaUsuario = styled.div`
   display:flex;
   gap: 1.5rem;
 `
-
 export const Login = styled.a`
   :link , :visited{
     text-decoration:none;
@@ -57,7 +52,6 @@ export const Login = styled.a`
     color: #f68a53;
   }
 `
-
 export const Register = styled.a`
   :link , :visited{
     text-decoration:none;

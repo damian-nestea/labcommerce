@@ -1,6 +1,5 @@
 import React from 'react'
-import { Price } from '../../FormatPrice/formatPriceStyle'
-import { ItemListContainer, ItemContainer , PriceItem , QuantidadeItem , NomeItem , AddRemoveContainer , RemoveText,  RemoverButton , AddButton} from './itemsStyle'
+import { ItemListContainer , ItemContainer , PriceItem , QuantidadeItem , NomeItem , AddRemoveContainer , RemoveText , RemoverButton , AddButton } from './itemsStyle'
 import { FormatPrice } from '../../FormatPrice/FormatPrice'
 
 export const Items = ({ car , removeFromCart , addToCart}) => {

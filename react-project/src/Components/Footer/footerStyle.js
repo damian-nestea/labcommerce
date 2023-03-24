@@ -13,7 +13,6 @@ export const FooterTopContainer = styled.section`
   display:flex;
   justify-content:space-between;
 `
-
 export const AstroDevLinks = styled.ul`
   list-style-type:none;
   display:flex;
@@ -43,7 +42,6 @@ export const Links = styled.a`
     color:#F68A53
   }
 `
-
 export const ContatoLinks = styled.a`
   :link , :visited{
     text-decoration:none;
@@ -68,25 +66,21 @@ export const Underline = styled.span`
   text-decoration:underline;
   text-decoration-color:#F68A53;
 `
-
 export const FooterBottomContainer = styled.section`
   min-height:3rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
 `
-
 export const DireitosReservados = styled.p`
   font-size:0.8rem;
   color:#A2A2A2;
 `
-
 export const AstroDevRedesSociais = styled.ul`
   list-style-type:none;
   display:flex;
   gap:0.5rem;
 `
-
 export const LinksRedesSociais = styled.a`
   img{
     width:2rem;

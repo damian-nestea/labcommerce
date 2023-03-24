@@ -20,6 +20,7 @@ function App() {
       localStorage.getItem("ValorTotal") ? JSON.parse(localStorage.getItem("ValorTotal")): 0
   );
 
+
   /* Funções para setar estados de filtros */
   const onChangeMinFilter = (e) =>{
     e.target.value >= 0 ? setMinFilter(e.target.value):alert(`Só valores positivos!`);
@@ -30,6 +31,7 @@ function App() {
   const onChangeSearchFilter = (e) =>{
     setSearchFilter(e.target.value);
   }
+
 
   /* Funções para adicionar e remover itens do carrinho de compras */
   const addToCart = (item) => {
@@ -74,6 +76,7 @@ function App() {
     setAmount(amount-produto.price)
   };
 
+  /* UseEffect para controle de carrinho de compras e recuperação de dados do localStorage */
   useEffect(() => {
     if(localStorage.getItem("CarroDeCompras")){
       setCar(JSON.parse(localStorage.getItem("CarroDeCompras")))
@@ -84,6 +87,8 @@ function App() {
     localStorage.setItem("CarroDeCompras", JSON.stringify(car))
   },[car])
 
+
+  /* UseEffect para controle de valor total do carrinho e recuperação de dados do localStorage */
   useEffect(() => {
     if(localStorage.getItem("ValorTotal")){
       setAmount(JSON.parse(localStorage.getItem("ValorTotal")))
@@ -94,6 +99,7 @@ function App() {
     localStorage.setItem("ValorTotal", JSON.stringify(amount))
   },[amount])
 
+  
   return (  
     <div>
       <GlobalStyle />
