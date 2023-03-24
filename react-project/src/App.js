@@ -22,16 +22,22 @@ function App() {
 
 
   /* Funções para setar estados de filtros */
-  const onChangeMinFilter = (e) =>{
+  const onChangeMinFilter = (e) => {
     e.target.value >= 0 ? setMinFilter(e.target.value):alert(`Só valores positivos!`);
   }
-  const onChangeMaxFilter = (e) =>{
+  const onChangeMaxFilter = (e) => {
     e.target.value >= 0 ? setMaxFilter(e.target.value):alert(`Só valores positivos!`);
   }               
-  const onChangeSearchFilter = (e) =>{
+  const onChangeSearchFilter = (e) => {
     setSearchFilter(e.target.value);
   }
 
+  /* Função para limpar filtros */
+  const limparFiltros = () => {
+    setMinFilter("");
+    setMaxFilter("");
+    setSearchFilter("");
+  }
 
   /* Funções para adicionar e remover itens do carrinho de compras */
   const addToCart = (item) => {
@@ -112,6 +118,7 @@ function App() {
           onChangeMaxFilter ={onChangeMaxFilter}
           searchFilter = {searchFilter}
           onChangeSearchFilter ={onChangeSearchFilter}
+          limparFiltros = {limparFiltros}
         />
         <Home
           ItemsList = {ItemsList}

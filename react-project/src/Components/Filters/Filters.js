@@ -1,7 +1,7 @@
 import React from 'react'
-import { FiltersContainer , FiltersTitle , Form , StyledLabel , Input} from './filtersStyle'
+import { FiltersContainer , FiltersTitle , Form , StyledLabel , Input , LimparFiltros } from './filtersStyle'
 
-export const Filters = ({minFilter,onChangeMinFilter,maxFilter,onChangeMaxFilter,searchFilter,onChangeSearchFilter}) => {
+export const Filters = ({minFilter, onChangeMinFilter, maxFilter, onChangeMaxFilter, searchFilter, onChangeSearchFilter, limparFiltros}) => {
   return (
     <FiltersContainer>
       <FiltersTitle>Filters</FiltersTitle>
@@ -18,6 +18,7 @@ export const Filters = ({minFilter,onChangeMinFilter,maxFilter,onChangeMaxFilter
           Busca por nome:
           <Input value={searchFilter} onChange={onChangeSearchFilter} id="buscaPorNome" type={"text"} />
         </StyledLabel>
+        <LimparFiltros onClick={limparFiltros}>Limpar Filtros</LimparFiltros>
       </Form>
     </FiltersContainer>
   )
