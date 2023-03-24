@@ -27,6 +27,7 @@ export const Links = styled.a`
     text-transform:uppercase;
     font-weight:200;
     color:#FFF;
+    transition: 0.5s;
   }
   ::before{
     content:" ";
@@ -47,6 +48,7 @@ export const ContatoLinks = styled.a`
     text-decoration:none;
     font-weight:200;
     color:#FFF;
+    transition: 0.5s;
   }
   ::before{
     content:" ";
@@ -85,6 +87,7 @@ export const LinksRedesSociais = styled.a`
   img{
     width:2rem;
     border-radius:0.5rem;
+    transition: 0.3s;
     :hover{
       width:2.2rem;
     }
