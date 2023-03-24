@@ -27,18 +27,23 @@ export const ContainerImagemProduto = styled.div`
 `
 
 export const ImagemProduto = styled.img`
-  width:60%;
-  height:60%;
+  display:flex;
+  align-items:center;
+  max-height:90%;
   border-radius:0.5rem;
 `
 
 export const NomeProduto = styled.h3`
+  display:flex;
+  align-items:center;
   font-weight:500;
   font-size:1.5rem;
+  text-align:center;
   color: #00665e;
 `
 
 export const DescricaoProduto = styled.p`
+  height:3rem;
   font-size:0.8rem;
   text-align:center;
   text-transform:uppercase;
