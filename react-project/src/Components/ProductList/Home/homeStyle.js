@@ -13,27 +13,20 @@ background-color:#D4EFDF;
   margin-bottom:2rem;
   border-radius:1rem;
 `
-
 export const HomeTopContainer = styled.div`
   flex:0 0 100%;
   display:flex;
   justify-content:space-between;
   color:#00665e;
 `
-
 export const HomeProductList = styled.section `
   display:flex;
   flex-wrap:wrap;
   gap:1.5rem;
   justify-content:space-evenly;
 `
-
-export const QtdeProdutos = styled.p`
-
-`
-
+export const QtdeProdutos = styled.p``
 export const LabelListOrdenacao = styled.label``
-
 export const DropDownListOrdenacao = styled.select`
   height:2rem;
   padding:0.2rem;

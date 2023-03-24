@@ -40,7 +40,6 @@ export const Footer = () => {
         <li><LinksRedesSociais><img src={whatsapp} alt="icone do facebook" /></LinksRedesSociais></li>
         <li><LinksRedesSociais><img src={twitter} alt="icone do facebook" /></LinksRedesSociais></li>
       </AstroDevRedesSociais>
-
     </FooterBottomContainer>
     </FooterMainContainer>
   )

@@ -15,12 +15,7 @@ export const Header = () => {
       <AreaUsuario>
         <Login href='./'>Login</Login>
         <Register href='./'>Cadastro</Register>
-      
       </AreaUsuario>
-
-
-
-
     </HeaderContainer>
   )
 }

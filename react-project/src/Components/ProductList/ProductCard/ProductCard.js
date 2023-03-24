@@ -1,11 +1,11 @@
 import React from 'react'
-import { Card , ContainerImagemProduto , ImagemProduto , NomeProduto , DescricaoProduto , ValorProduto , AddToCartButton , ImgCart} from './productCardStyle'
+import { Card , ContainerImagemProduto , ImagemProduto , NomeProduto , DescricaoProduto , ValorProduto , AddToCartButton } from './productCardStyle'
 import { FormatPrice } from '../FormatPrice/FormatPrice'
-import {ReactComponent as ImgSvg} from '../../assets/img/imgAddToCart.svg'
+import { ReactComponent as ImgSvg } from '../../assets/img/imgAddToCart.svg'
 
 export const ProductCard = ({product, addToCart}) => {
   return (
-        <Card>
+        <Card key={product.id}>
           <ContainerImagemProduto> 
             <ImagemProduto src={product.imageUrl}/> 
           </ContainerImagemProduto>

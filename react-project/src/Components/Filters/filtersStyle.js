@@ -7,27 +7,21 @@ export const FiltersContainer = styled.section`
   flex-direction:column;
   padding:1rem;
 `
-
 export const FiltersTitle = styled.h2`
 color:#00665e;
-
 `
-
 export const Form = styled.form`
   display:flex;
   flex-direction:column;
   margin-top:2rem;
   gap:1rem;
-
 `
-
 export const StyledLabel = styled.label`
   display:flex;
   flex-direction:column;
   gap:0.1rem;
   color:#00665e;
 `
-
 export const Input = styled.input`
   :focus{
     outline:none;
@@ -47,7 +41,6 @@ export const Input = styled.input`
   [type=number] {
     -moz-appearance:textfield;
   }
-
 `
 
 

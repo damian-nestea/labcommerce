@@ -1,9 +1,8 @@
 import React from 'react';
 import { ProductCard } from '../ProductCard/ProductCard'
-import { Items } from '../ShoppingCart/Items/Items';
 import { HomeContainer , HomeTopContainer , QtdeProdutos , LabelListOrdenacao , DropDownListOrdenacao , HomeProductList } from './homeStyle'
 
-export const Home = ({ItemsList, car, setCar,amount,setAmount,addToCart , searchFilter, minFilter, maxFilter}) => {
+export const Home = ({ItemsList , addToCart , searchFilter , minFilter , maxFilter}) => {
   /* Declaração de estado para ordenar produtos */
   const listaOrdination = ["Ordenar","Menor preço", "Maior preço"]
   const [ordination, setOrdination] = React.useState(listaOrdination[0]);
