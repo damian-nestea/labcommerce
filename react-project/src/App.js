@@ -14,21 +14,24 @@ function App() {
   const [maxFilter, setMaxFilter] = React.useState("");
   const [searchFilter, setSearchFilter] = React.useState("");
   const [car, setCar] = React.useState(
-      localStorage.getItem("CarroDeCompras") ?
-        JSON.parse(localStorage.getItem("CarroDeCompras")):[]);
-  const [amount, setAmount] = React.useState(0);
+      localStorage.getItem("CarroDeCompras") ? JSON.parse(localStorage.getItem("CarroDeCompras")):[]
+  );
+  const [amount, setAmount] = React.useState(
+      localStorage.getItem("ValorTotal") ? JSON.parse(localStorage.getItem("ValorTotal")): 0
+  );
 
+  /* Funções para setar estados de filtros */
   const onChangeMinFilter = (e) =>{
     e.target.value >= 0 ? setMinFilter(e.target.value):alert(`Só valores positivos!`);
   }
   const onChangeMaxFilter = (e) =>{
     e.target.value >= 0 ? setMaxFilter(e.target.value):alert(`Só valores positivos!`);
-  }
-                        
+  }               
   const onChangeSearchFilter = (e) =>{
     setSearchFilter(e.target.value);
   }
 
+  /* Funções para adicionar e remover itens do carrinho de compras */
   const addToCart = (item) => {
     // adiciona no carrinho, caso já exista um item com o mesmo id, adiciona 1 unidade na quantidade
     if (car.some((cartItem) => cartItem.id === item.id)) {
@@ -71,12 +74,6 @@ function App() {
     setAmount(amount-produto.price)
   };
 
-  useEffect(() =>{
-    if(localStorage.getItem("CarroDeCompras")){
-      setCar(JSON.parse(localStorage.getItem("CarroDeCompras")))
-    }
-  }, [])
-
   useEffect(() => {
     if(localStorage.getItem("CarroDeCompras")){
       setCar(JSON.parse(localStorage.getItem("CarroDeCompras")))
@@ -86,6 +83,16 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("CarroDeCompras", JSON.stringify(car))
   },[car])
+
+  useEffect(() => {
+    if(localStorage.getItem("ValorTotal")){
+      setAmount(JSON.parse(localStorage.getItem("ValorTotal")))
+    }
+} , [] );
+
+  useEffect(()=>{
+    localStorage.setItem("ValorTotal", JSON.stringify(amount))
+  },[amount])
 
   return (  
     <div>
