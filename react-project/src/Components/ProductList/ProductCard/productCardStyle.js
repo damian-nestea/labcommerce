@@ -17,7 +17,7 @@ export const Card = styled.article`
 `
 
 export const ContainerImagemProduto = styled.div`
-  background-color:#c2c2c2;
+  background-color:#d5d5d5;
   width:13rem;
   height:13rem;
   display:flex;
@@ -29,7 +29,7 @@ export const ContainerImagemProduto = styled.div`
 export const ImagemProduto = styled.img`
   display:flex;
   align-items:center;
-  max-height:90%;
+  max-height:80%;
   max-width:90%;
   border-radius:0.5rem;
 `
