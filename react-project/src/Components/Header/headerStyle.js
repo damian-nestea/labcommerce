@@ -33,9 +33,9 @@ export const MenuItem = styled.a`
 
 export const Logo = styled.img`
 margin-right:10vw;
-  height:8rem;
+  height:9rem;
   :hover{
-    height:9rem;
+    height:11rem;
   }
 `
 
