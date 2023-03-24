@@ -30,6 +30,7 @@ export const ImagemProduto = styled.img`
   display:flex;
   align-items:center;
   max-height:90%;
+  max-width:90%;
   border-radius:0.5rem;
 `
 
