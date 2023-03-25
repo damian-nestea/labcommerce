@@ -29,6 +29,11 @@ export const ImagemProduto = styled.img`
   max-height:80%;
   max-width:90%;
   border-radius:0.5rem;
+  transition: 1s;
+  :hover{
+    max-height:90%;
+    max-width:95%;
+  }
 `
 export const NomeProduto = styled.h3`
   display:flex;
@@ -63,6 +68,7 @@ border:none;
 border-radius:0.3rem;
 margin-top:0.5rem;
 cursor:pointer;
+transition: 0.5s;
 :hover{
   background-color:#f68a53;
 }

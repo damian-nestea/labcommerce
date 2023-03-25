@@ -76,14 +76,14 @@ export const ItemsList = [
   },
   {
     id:10,
-    name: "Satelite Espacial S01",
+    name: "Satélite Espacial S01",
     description: "Satélite de última geração especializado em meteorologia.",
     price: 7300,
     imageUrl: satellite01
   },
   {
     id:11,
-    name: "Satelite Espacial S02",
+    name: "Satélite Espacial S02",
     description: "Rêplica do satélite SpaceX, especializado em comunicação.",
     price: 6500,
     imageUrl: satellite02
