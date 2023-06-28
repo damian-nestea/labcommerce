@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-/* export const CardContainer = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3.5rem;
-  justify-content: space-around;
-`; */
 export const Card = styled.article`
   display: flex;
   flex-direction: column;

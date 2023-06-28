@@ -1,6 +1,7 @@
 import React from 'react'
 import { HeaderContainer , MainNavBar , MenuItem , Logo,  AreaUsuario , Login , Register} from './headerStyle'
 import ImgLogo from '../assets/img/logoAstroDev.png'
+import CartBtn from '../CartBtn/CartBtn'
 
 export const Header = () => {
   return (
@@ -15,6 +16,7 @@ export const Header = () => {
       <AreaUsuario>
         <Login href='./'>Login</Login>
         <Register href='./'>Cadastro</Register>
+        <CartBtn />
       </AreaUsuario>
     </HeaderContainer>
   )
