@@ -12,9 +12,14 @@ export const HomeContainer = styled.main`
   padding: 1rem 2rem;
   margin-bottom: 2rem;
   border-radius: 1rem;
+
+  grid-area: home;
+
   @media screen and (max-width: 1400px) {
-    width: 80vw;
+    width:100%;
   }
+
+
 `;
 export const HomeTopContainer = styled.div`
   flex: 0 0 100%;
@@ -22,6 +27,11 @@ export const HomeTopContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   color: #00665e;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 export const HomeProductList = styled.section`
   display: flex;
