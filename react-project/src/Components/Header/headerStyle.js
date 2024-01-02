@@ -10,6 +10,13 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   font-family: "Sono", sans-serif;
+  @media screen and (max-width: 1100px) {
+    height: 35vh;
+    padding:1rem;
+
+    display: grid;
+    grid-template-areas: "login login" "logo logo" "menu menu";
+  }
 `;
 export const MainNavBar = styled.ul`
   display: flex;
@@ -17,6 +24,10 @@ export const MainNavBar = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  @media screen and (max-width: 1100px) {
+    grid-area: menu;
+    margin: 0 auto 1rem;
+  }
 `;
 export const MenuItem = styled.a`
   :link,
@@ -35,7 +46,11 @@ export const Logo = styled.img`
   height: 9rem;
   transition: 0.5s;
   :hover {
-    height: 11rem;
+    height: 9.1rem;
+  }
+  @media screen and (max-width: 1100px) {
+    grid-area: logo;
+    margin:0 auto;
   }
 `;
 export const AreaUsuario = styled.div`
@@ -44,6 +59,11 @@ export const AreaUsuario = styled.div`
   align-items: center;
 
   max-height: 80%;
+
+  @media screen and (max-width: 1100px) {
+    grid-area: login;
+    margin-left:auto;
+  }
 `;
 export const Login = styled.a`
   :link,

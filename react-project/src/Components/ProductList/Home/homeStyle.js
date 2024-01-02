@@ -20,6 +20,7 @@ export const HomeTopContainer = styled.div`
   flex: 0 0 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: #00665e;
 `;
 export const HomeProductList = styled.section`
