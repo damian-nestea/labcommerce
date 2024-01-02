@@ -15,7 +15,7 @@ export const FiltersContainer = styled.section`
 
   @media screen and (max-width: 750px) {
     width: 100%;
-    min-height:auto;
+    min-height: 0px;
     padding-bottom: 2rem;
   }
 `;
@@ -66,4 +66,7 @@ export const LimparFiltros = styled.button`
   border: none;
   border-radius: 0.2rem;
   cursor: pointer;
+  :hover {
+    filter: brightness(110%);
+  }
 `;

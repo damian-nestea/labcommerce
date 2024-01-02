@@ -10,4 +10,10 @@ export const CartIconContainer = styled.div`
 
 export const CartImgSrc = styled.img`
   width: 2rem;
+
+  cursor: pointer;
+
+  :hover {
+    opacity: 0.9;
+  }
 `;

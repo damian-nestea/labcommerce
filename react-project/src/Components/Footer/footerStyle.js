@@ -107,6 +107,7 @@ export const AstroDevRedesSociais = styled.ul`
   gap: 0.5rem;
 `;
 export const LinksRedesSociais = styled.a`
+  cursor: pointer;
   img {
     width: 2rem;
     border-radius: 0.5rem;

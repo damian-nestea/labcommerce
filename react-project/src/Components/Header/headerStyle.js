@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  height: 15vh;
+  min-height: 15vh;
   width: 100vw;
   max-width: 100%;
   padding: 0 5rem;
@@ -11,8 +11,8 @@ export const HeaderContainer = styled.header`
   align-items: center;
   font-family: "Sono", sans-serif;
   @media screen and (max-width: 1100px) {
-    height: 35vh;
-    padding:1rem;
+    height: 15rem;
+    padding: 1rem;
 
     display: grid;
     grid-template-areas: "login login" "logo logo" "menu menu";
@@ -45,12 +45,13 @@ export const Logo = styled.img`
   margin-right: 10vw;
   height: 9rem;
   transition: 0.5s;
+  cursor: pointer;
   :hover {
-    height: 9.1rem;
+    opacity: 0.8;
   }
   @media screen and (max-width: 1100px) {
     grid-area: logo;
-    margin:0 auto;
+    margin: 0 auto;
   }
 `;
 export const AreaUsuario = styled.div`
@@ -62,7 +63,7 @@ export const AreaUsuario = styled.div`
 
   @media screen and (max-width: 1100px) {
     grid-area: login;
-    margin-left:auto;
+    margin-left: auto;
   }
 `;
 export const Login = styled.a`
