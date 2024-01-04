@@ -1,11 +1,19 @@
 import React from "react";
 import { CartIconContainer, CartImgSrc } from "./cartBtnStyle";
-import cartImg from "../assets/img/shopping-cart.png";
+import { ShoppingCartSVG } from "../shoppingCartSVG/ShoppingCartSVG";
 
-const CartBtn = () => {
+const CartBtn = ({ setMobileCart, mobileCart }) => {
+  const color = mobileCart ? "#f68a53" : "#009a87";
   return (
     <CartIconContainer>
-      <CartImgSrc src={cartImg} />
+      <CartImgSrc
+        onClick={() => {
+          setMobileCart(!mobileCart);
+        }}
+        mobileActive={mobileCart}
+      >
+        <ShoppingCartSVG color={color} />
+      </CartImgSrc>
     </CartIconContainer>
   );
 };

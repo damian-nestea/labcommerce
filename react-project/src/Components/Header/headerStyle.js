@@ -63,7 +63,7 @@ export const AreaUsuario = styled.div`
 
   @media screen and (max-width: 1100px) {
     grid-area: login;
-    margin-left: auto;
+    margin-inline: auto 4rem;
   }
 `;
 export const Login = styled.a`
