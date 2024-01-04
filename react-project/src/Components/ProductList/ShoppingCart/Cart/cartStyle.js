@@ -6,9 +6,6 @@ export const CartContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  @media screen and (max-width: 1400px) {
-    display: none;
-  }
 `;
 export const ItemsContainer = styled.article`
   display: flex;
