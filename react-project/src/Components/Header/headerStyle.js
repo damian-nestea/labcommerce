@@ -65,6 +65,12 @@ export const AreaUsuario = styled.div`
     grid-area: login;
     margin-inline: auto 4rem;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 0.7rem;
+    margin-inline: 0 auto;
+    gap: 0.5rem;
+  }
 `;
 export const Login = styled.a`
   :link,

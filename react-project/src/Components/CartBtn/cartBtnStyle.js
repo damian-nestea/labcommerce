@@ -19,7 +19,7 @@ export const CartIconContainer = styled.button`
 
 export const CartImgSrc = styled.div`
   width: 2rem;
-
+  background-color: #fff;
   cursor: pointer;
 
   :hover {
