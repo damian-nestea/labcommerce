@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fade = keyframes`
+    0%{
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1);    
+    }
+`;
 
 export const ItemListContainer = styled.section`
   display: flex;
@@ -13,6 +24,7 @@ export const ItemContainer = styled.article`
   gap: 1rem;
   padding: 1rem 0;
   border-bottom: 0.05rem solid #00665e;
+  animation: ${fade} 0.6s ease-in-out backwards;
 `;
 export const QuantidadeItem = styled.p`
   display: flex;

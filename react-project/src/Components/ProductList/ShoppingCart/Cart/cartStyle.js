@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fade = keyframes`
+    0%{
+      opacity: 0;
+      transform: scale(0.5) translateX(30%);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1) translateX(0%);
+    }
+`;
 
 export const CartContainer = styled.section`
   width: 20vw;
@@ -16,6 +27,7 @@ export const ItemsContainer = styled.article`
   padding: 1rem;
   color: #00665e;
   font-size: 1rem;
+  animation: ${fade} 0.6s ease-in-out backwards;
 `;
 export const CartTitle = styled.h2`
   color: #00665e;
@@ -53,4 +65,15 @@ export const CartMobileContainer = styled.section`
   position: absolute;
   top: 6rem;
   right: 2rem;
+
+  animation: ${fade} 0.6s ease-in-out backwards;
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
 `;
