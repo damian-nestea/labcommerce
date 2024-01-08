@@ -40,6 +40,9 @@ export const MenuItem = styled.a`
   :hover {
     color: #f68a53;
   }
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
 export const Logo = styled.img`
   margin-right: 10vw;
