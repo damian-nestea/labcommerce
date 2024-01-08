@@ -37,3 +37,20 @@ export const FinalizarCompra = styled.button`
   border-radius: 0.2rem;
   cursor: pointer;
 `;
+
+export const CartMobileContainer = styled.section`
+  background-color: #eee;
+  opacity: 0.9;
+  border-bottom: 1px solid #a2a2a2;
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+`;
