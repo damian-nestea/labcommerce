@@ -7,7 +7,7 @@ Design de layout com inspiração no ecommerce https://www.getwelly.com/.
 Imagens usadas no projeto do site https://pixabay.com/.
 
 ## Status do Projeto
-Em construção...
+Finalizado...
 
 ### Features
 - [x] Renderização de lista de produtos
@@ -18,7 +18,7 @@ Em construção...
 
 ### 🛠 Tecnologias
 - React
-- React Hooks (UseState e UseEffect)
+- React Hooks (UseState, UseEffect e Custom Hooks)
 - styled-components
 
 ### Link Projeto
