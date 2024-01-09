@@ -22,7 +22,7 @@ Finalizado...
 - styled-components
 
 ### Link Projeto
-https://jdamian-react-ecommerce.surge.sh/
+https://react-project-labcommerce.vercel.app/
 
 ### Autor
 Desenvolvido por Jair Damián Martínez!
