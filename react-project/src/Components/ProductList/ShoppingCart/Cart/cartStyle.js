@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
-const fade = keyframes`
+const fadeIn = keyframes`
     0%{
       opacity: 0;
       transform: scale(0.5) translateX(30%);
@@ -8,6 +8,17 @@ const fade = keyframes`
     100% {
       opacity: 0.8;
       transform: scale(1) translateX(0%);
+    }
+`;
+
+const fadeOut = keyframes`
+    0%{
+      opacity: 1;
+      transform: scale(1) translateX(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0) translateX(30%) translateY(-50%);
     }
 `;
 
@@ -27,7 +38,7 @@ export const ItemsContainer = styled.article`
   padding: 1rem;
   color: #00665e;
   font-size: 1rem;
-  animation: ${fade} 0.6s ease-in-out backwards;
+  animation: ${fadeIn} 0.6s ease-in-out backwards;
 `;
 export const CartTitle = styled.h2`
   color: #00665e;
@@ -52,7 +63,7 @@ export const FinalizarCompra = styled.button`
 
 export const CartMobileContainer = styled.section`
   background-color: #eee;
-  opacity: 0.9;
+  opacity: 0;
   border-bottom: 1px solid #a2a2a2;
   border-radius: 0.3rem;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -66,14 +77,14 @@ export const CartMobileContainer = styled.section`
   top: 6rem;
   right: 2rem;
 
-  animation: ${fade} 0.6s ease-in-out backwards;
+  transition: 2.6s ease-in-out;
 
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0.8;
-    }
+  @media screen and (max-width: 1100px) {
+    top: 3.5rem;
+  }
+
+  animation: ${fadeIn} 0.6s ease-in-out forwards;
+  &.hidden {
+    animation: ${fadeOut} 0.6s linear forwards;
   }
 `;

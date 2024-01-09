@@ -15,11 +15,12 @@ import CartBtn from "../../../CartBtn/CartBtn";
 export const Cart = ({ car, amount, removeFromCart, addToCart }) => {
   const mobile = useMedia("(max-width:1400px)");
   const [mobileCart, setMobileCart] = React.useState(false);
+  const [menuOpened, setMenuOpened] = React.useState(null);
 
   React.useEffect(() => {}, [mobileCart]);
 
-  const mobileCartItems = mobileCart && (
-    <CartMobileContainer>
+  const mobileCartItems = menuOpened === null || (
+    <CartMobileContainer className={menuOpened ? "" : "hidden"}>
       <CartTitle>Cart</CartTitle>
       <ItemsContainer>
         <Items
@@ -36,10 +37,16 @@ export const Cart = ({ car, amount, removeFromCart, addToCart }) => {
       ) : null}
     </CartMobileContainer>
   );
+  /*   ); */
 
   const cart = mobile ? (
     <>
-      <CartBtn setMobileCart={setMobileCart} mobileCart={mobileCart} />
+      <CartBtn
+        setMobileCart={setMobileCart}
+        mobileCart={mobileCart}
+        menuOpened={menuOpened}
+        setMenuOpened={setMenuOpened}
+      />
       {mobileCartItems}
     </>
   ) : (
