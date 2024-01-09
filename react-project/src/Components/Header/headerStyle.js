@@ -40,6 +40,9 @@ export const MenuItem = styled.a`
   :hover {
     color: #f68a53;
   }
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
 export const Logo = styled.img`
   margin-right: 10vw;
@@ -64,6 +67,12 @@ export const AreaUsuario = styled.div`
   @media screen and (max-width: 1100px) {
     grid-area: login;
     margin-inline: auto 4rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 0.7rem;
+    margin-inline: 0 auto;
+    gap: 0.5rem;
   }
 `;
 export const Login = styled.a`

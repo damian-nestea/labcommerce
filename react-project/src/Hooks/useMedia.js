@@ -1,7 +1,7 @@
 import React from "react";
 
 export const useMedia = (media) => {
-  const [match, setMatch] = React.useState(null);
+  const [match, setMatch] = React.useState(window.matchMedia(media));
 
   React.useEffect(() => {
     function changeMatch() {
